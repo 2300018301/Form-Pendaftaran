@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Pendaftaran</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Form Pendaftaran</h2>
+      <form
+        id="registrationForm"
+        action="/submit_registration"
+        method="POST"
+        onsubmit="return validateForm()"
+      >
+        <table>
+          <tr>
+            <td>
+              <label for="fname"
+                >Nama Depan <span class="required">*</span></label
+              >
+            </td>
+            <td><input type="text" id="fname" name="firstname" required /></td>
+          </tr>
+          <tr>
+            <td>
+              <label for="lname"
+                >Nama Belakang <span class="required">*</span></label
+              >
+            </td>
+            <td><input type="text" id="lname" name="lastname" required /></td>
+          </tr>
+          <tr>
+            <td>
+              <label for="email">Email <span class="required">*</span></label>
+            </td>
+            <td><input type="email" id="email" name="email" required /></td>
+          </tr>
+          <tr>
+            <td>
+              <label for="password"
+                >Kata Sandi <span class="required">*</span></label
+              >
+            </td>
+            <td>
+              <input type="password" id="password" name="password" required />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="dob"
+                >Tanggal Lahir <span class="required">*</span></label
+              >
+            </td>
+            <td><input type="date" id="dob" name="dob" required /></td>
+          </tr>
+          <tr>
+            <td>
+              <label>Jenis Kelamin <span class="required">*</span></label>
+            </td>
+            <td>
+              <div class="radio-group">
+                <input
+                  type="radio"
+                  id="male"
+                  name="gender"
+                  value="male"
+                  required
+                />
+                <label for="male">Laki-laki</label>
+                <input
+                  type="radio"
+                  id="female"
+                  name="gender"
+                  value="female"
+                  required
+                />
+                <label for="female">Perempuan</label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="country"
+                >Negara <span class="required">*</span></label
+              >
+            </td>
+            <td>
+              <select id="country" name="country" required>
+                <option value="">Pilih Negara</option>
+                <option value="indonesia">Indonesia</option>
+                <option value="malaysia">Malaysia</option>
+                <option value="singapore">Singapura</option>
+                <option value="thailand">Thailand</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="bio">Biografi</label></td>
+            <td><textarea id="bio" name="bio" rows="4"></textarea></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td class="checkbox-group">
+              <input type="checkbox" id="terms" name="terms" required />
+              <label for="terms" class="terms"
+                >Saya setuju dengan <a href="#">syarat dan ketentuan</a> yang
+                berlaku <span class="required">*</span></label
+              >
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><button type="submit" class="button">Daftar</button></td>
+          </tr>
+        </table>
+      </form>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
